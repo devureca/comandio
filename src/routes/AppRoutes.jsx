@@ -5,6 +5,7 @@ import { ProtectedRoute } from './ProtectedRoute'
 import Landing from '../pages/landing/Landing'
 import Login from '../pages/auth/Login'
 import Register from '../pages/auth/Register'
+import VerifyEmail from '../pages/auth/VerifyEmail'
 
 import AdminDashboard from '../pages/admin/AdminDashboard'
 import NegocioDashboard from '../pages/negocio/NegocioDashboard'
@@ -29,6 +30,8 @@ const AppRoutes = () => (
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/auth/verify-email" element={<VerifyEmail />} />
+        <Route path="/auth/callback" element={<RoleRedirect />} />
         <Route path="/menu/:negocioId" element={<MenuQR />} />
 
         <Route path="/dashboard" element={<ProtectedRoute><RoleRedirect /></ProtectedRoute>} />
